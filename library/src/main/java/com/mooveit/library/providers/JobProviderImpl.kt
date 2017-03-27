@@ -3,7 +3,15 @@ package com.mooveit.library.providers
 import com.mooveit.library.Fakeit.Companion.fakeit
 import com.mooveit.library.providers.definition.JobProvider
 
-class JobProviderImpl : JobProvider{
+class JobProviderImpl : JobProvider {
+
+    override fun position(): String {
+        return fakeit!!.fetch("job.position")
+    }
+
+    override fun seniority(): String {
+        return fakeit!!.fetch("job.seniority")
+    }
 
     override fun title(): String {
         return fakeit!!.fetch("job.title")
