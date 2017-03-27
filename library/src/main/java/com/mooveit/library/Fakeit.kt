@@ -274,7 +274,25 @@ class Fakeit private constructor(context: Context, locale: Locale) {
         fun harryPotter(): HarryPotterProvider {
             return HarryPotterProviderImpl()
         }
-        
 
+        @JvmStatic
+        fun job(): JobProvider {
+            return JobProviderImpl()
+        }
+
+        @JvmStatic
+        fun lordOfTheRings(): LordOfTheRingsProvider {
+            return LordOfTheRingsProviderImpl()
+        }
+
+        @JvmStatic
+        fun music(): MusicProvider {
+            return MusicProviderImpl()
+        }
+
+        @JvmStatic
+        fun heyArnold(): HeyArnoldProvider {
+            return HeyArnoldProviderImpl()
+        }
     }
 }
